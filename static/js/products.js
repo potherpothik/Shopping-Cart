@@ -4,6 +4,7 @@ async function fetchProducts() {
     try {
         const response = await fetch('products.json');
         products = await response.json();
+        console.log("All products", products); 
         renderProducts();
     } catch (error) {
         console.error('Error loading products:', error);
