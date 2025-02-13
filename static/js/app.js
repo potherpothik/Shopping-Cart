@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded and parsed');
+    // console.log('DOM fully loaded and parsed');
     fetchProducts();
 
     document.getElementById('productGrid').addEventListener('click', (e) => {

@@ -1,411 +1,369 @@
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-family: system-ui, -apple-system, sans-serif;
-    background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f8f9fa;
 }
-  
+
 .navbar {
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    background-color: #123524 !important;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #123524 !important;
 }
 
 .navbar-brand {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #fff !important;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff !important;
 }
- 
-  .main-content {
-    flex: 1;
-    padding: 2rem 0;
-    margin-bottom: 100px;
-  }
-  
-  .auth-card {
-    border: none;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    margin-bottom: 1rem;
-    background: white;
-  }
-  
-  .form-control {
-    padding: 0.6rem 1rem;
-  }
-  
-  .form-control:focus {
-    box-shadow: 0 0 0 0.2rem #123524;
-  }
-  
-  /* Button Styles */
-  .btn {
-    padding: 0.5rem 1.5rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  
-  .btn-primary {
-    background-color: #123524 !important;
-    border-color: #123524 !important;
-  }
-  .btn-primary:hover {
-    background-color: #123524 !important; /* Slightly darker shade for hover effect */
-    border-color: #123524 !important;
-  }
-  
-  .btn-outline-primary {
-    color: #123524 !important; /* Text color */
-    border-color: #123524 !important; /* Border color */
-  }
-  
-  .btn-outline-primary:hover {
-    background-color: #123524 !important; /* Background color on hover */
-    color: white !important; /* Ensure text is readable */
-  }
-  
-  .footer {
-    background-color: #123524;
-    box-shadow: 0 -2px 10px rgba(24, 26, 25, 0.1);
-    padding: 1.5rem 0;
-  }
-  
-  .social-links a {
-    color: #3866f0;
-    text-decoration: none;
-    margin: 0 12px;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-  }
-  
-  .social-links a:hover {
-    color: #FFFAEC;
-    transform: scale(1.2); /* Add hover effect to enlarge icons */
-  }
-  
+
+.main-content {
+  flex: 1;
+  padding: 2rem 0;
+  margin-bottom: 100px;
+}
+
+.auth-card {
+  border: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  background: white;
+}
+
+.form-control {
+  padding: 0.6rem 1rem;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem #123524;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background-color: #123524 !important;
+  border-color: #123524 !important;
+}
+.btn-primary:hover {
+  background-color: #123524 !important; /* Slightly darker shade for hover effect */
+  border-color: #123524 !important;
+}
+
+.btn-outline-primary {
+  color: #123524 !important; /* Text color */
+  border-color: #123524 !important; /* Border color */
+}
+
+.btn-outline-primary:hover {
+  background-color: #123524 !important; /* Background color on hover */
+  color: white !important; /* Ensure text is readable */
+}
+
+.footer {
+  background-color: #123524;
+  box-shadow: 0 -2px 10px rgba(24, 26, 25, 0.1);
+  padding: 1.5rem 0;
+}
+
+.social-links a {
+  color: #3866f0;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #FFFAEC;
+  transform: scale(1.2); /* Add hover effect to enlarge icons */
+}
+
+.copyright,
+.footer a {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Ensure everything is centered on mobile */
+@media (max-width: 767px) {
   .copyright,
   .footer a {
-    font-size: 1rem;
-    color: #fff;
+    text-align: center;
+    display: block; /* Stack items on small screens */
   }
-  
-  /* Ensure everything is centered on mobile */
-  @media (max-width: 767px) {
-    .copyright,
-    .footer a {
-      text-align: center;
-      display: block; /* Stack items on small screens */
-    }
-  
-    /* Ensure Privacy, Terms, and Contact stay together in one line */
-    .footer-links {
+
+  /* Ensure Privacy, Terms, and Contact stay together in one line */
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Adds spacing between links */
+    flex-wrap: wrap; /* Prevents overflow while keeping them together */
+  }
+
+    /* Ensure social media links stay in one line and center them */
+    .social-links {
       display: flex;
-      justify-content: center;
-      gap: 8px; /* Adds spacing between links */
-      flex-wrap: wrap; /* Prevents overflow while keeping them together */
+      flex-wrap: nowrap;  /* Ensure icons stay in one line */
+      justify-content: center; /* Center icons horizontally */
     }
   
-      /* Ensure social media links stay in one line and center them */
-      .social-links {
-        display: flex;
-        flex-wrap: nowrap;  /* Ensure icons stay in one line */
-        justify-content: center; /* Center icons horizontally */
-      }
-    
-      .social-links a {
-        margin: 0 12px;  /* Space between icons */
-        font-size: 1.2rem; /* Adjust size if needed */
-      }
-    }
-  
-  @media (max-width: 768px) {
-    .navbar-nav {
-      padding: 0.5rem 0;
-    }
-  
-    .search-form {
-      margin: 1rem 0;
-      width: 100%;
-    }
-  
-    .main-content {
-      padding: 1rem 0;
-    }
-  
-    .auth-card {
-      margin: 0.5rem 0;
+    .social-links a {
+      margin: 0 12px;  /* Space between icons */
+      font-size: 1.2rem; /* Adjust size if needed */
     }
   }
 
-  /* Modal slide animation */
-  .modal.fade .modal-dialog.modal-dialog-slideright {
-    transform: translate(100%, 0);
-    transition: transform 0.3s ease-out;
+@media (max-width: 768px) {
+  .navbar-nav {
+    padding: 0.5rem 0;
   }
 
-  .modal.show .modal-dialog.modal-dialog-slideright {
-    transform: translate(0, 0);
+  .search-form {
+    margin: 1rem 0;
+    width: 100%;
   }
 
-  .modal-body h5 {
-    margin-bottom: 0.5rem;
+  .main-content {
+    padding: 1rem 0;
+  }
+
+  .auth-card {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Modal slide animation */
+.modal.fade .modal-dialog.modal-dialog-slideright {
+  transform: translate(100%, 0);
+  transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog.modal-dialog-slideright {
+  transform: translate(0, 0);
+}
+
+.modal-body h5 {
+  margin-bottom: 0.5rem;
 }
 
 .modal-footer {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
-  /* Toast styling */
-  .toast {
-    z-index: 1056;
-  }
+/* Toast styling */
+.toast {
+  z-index: 1056;
+}
 
 .product-img {
-    height: 200px;
-    object-fit: contain;
-    padding: 10px;
+  height: 200px;
+  object-fit: contain;
+  padding: 10px;
 }
 
 /* Product Cards */
 .card {
-    transition: transform 0.2s;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgba(0,0,0,0.125);
+  transition: transform 0.2s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0,0,0,0.125);
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .card-body {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-/* .cart-item-img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-} */
-
-/* .list-group-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-} */
-
-/* .quantity-controls {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: auto;
-} */
-
-/* Add to Cart Button */
-.btn-primary.add-to-cart {
-    background-color: #123524 !important;
-    border-color: #123524 !important;
-    color: #fff !important;
-    width: 100%;
-    margin-top: auto;
-    padding: 0.75rem 1.5rem;
-}
-
-.btn-primary.add-to-cart:hover {
-    background-color: #0f2d1e !important;
-    border-color: #0f2d1e !important;
-}
-
-.product-img {
-    height: 200px;
-    object-fit: contain;
-    padding: 10px;
-}
-
-/* Cart Modal Styles */
-.cart-item-img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-}
-
-/* .list-group-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 1rem;
-} */
-
-/* .quantity-controls {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: auto;
-    min-width: 140px;
-} */
-
-.cart-summary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1.5rem 0 1rem;
-    padding: 1rem;
-    background-color: #f8f9fa;
-    border-radius: 0.5rem;
-}
-
-.cart-summary-item {
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-/* Footer Styles */
-.footer {
-    background-color: #123524 !important;
-    color: #fff !important;
-    padding: 2rem 0;
-    margin-top: auto;
-}
-
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    opacity: 0.8;
-    transition: opacity 0.3s;
-}
-
-.footer-links a:hover {
-    opacity: 1;
-    color: #fff;
-}
-
-.social-links a {
-    color: #fff;
-    font-size: 1.5rem;
-    margin: 0 0.75rem;
-    transition: transform 0.3s;
-}
-
-.social-links a:hover {
-    transform: translateY(-2px);
-    color: #fff;
-}
-
-/* Modal Animations */
-.modal.fade .modal-dialog.modal-dialog-slideright {
-    transform: translate(100%, 0);
-    transition: transform 0.3s ease-out;
-}
-
-.modal.show .modal-dialog.modal-dialog-slideright {
-    transform: translate(0, 0);
-}
-
-/* Form Controls */
-.form-control:focus {
-    box-shadow: 0 0 0 0.2rem rgba(18,53,36,0.25);
-    border-color: #123524;
-}
-
-/* Responsive Design */
-@media (max-width: 767px) {
-    .navbar-nav {
-        padding: 0.5rem 0;
-    }
-
-    .cart-summary {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .social-links {
-        justify-content: center;
-        margin: 1rem 0;
-    }
-
-    .btn-primary.add-to-cart {
-        padding: 0.6rem 1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .product-img {
-        height: 150px;
-    }
-    
-    /* .list-group-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    } */
-    
-    /* .quantity-controls {
-        margin-left: 0;
-        width: 100%;
-        justify-content: space-between;
-    } */
-}
-
-/* Toast Styling */
-.toast {
-    z-index: 1056;
-    background-color: #123524 !important;
-    color: #fff !important;
-}
-
-.toast-header {
-    background-color: #0f2d1e !important;
-    color: #fff !important;
-}
-
-/* Add these styles to your existing CSS */
-.list-group-item {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  flex-wrap: wrap; /* Allow wrapping on small screens */
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .cart-item-img {
   width: 60px;
   height: 60px;
   object-fit: contain;
-  flex-shrink: 0;
 }
 
-.item-details {
-  flex: 1;
-  min-width: 200px;
+/* Update the list-group-item styles */
+.list-group-item {
+display: flex;
+align-items: center;
+gap: 20px;
+padding: 1rem;
+position: relative; /* Add this */
+}
+
+/* Add to Cart Button */
+.btn-primary.add-to-cart {
+  background-color: #123524 !important;
+  border-color: #123524 !important;
+  color: #fff !important;
+  width: 100%;
+  margin-top: auto;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-primary.add-to-cart:hover {
+  background-color: #0f2d1e !important;
+  border-color: #0f2d1e !important;
+}
+
+.product-img {
+  height: 200px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+/* Cart Modal Styles */
+.cart-item-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
 .quantity-controls {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  flex-wrap: nowrap;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: 50px; /* Add space for delete button */
+  min-width: 140px;
+}
+
+/* Add styles for the delete button */
+.list-group-item .btn-danger {
+position: absolute;
+right: 1rem;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+}
+
+.cart-summary-item {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #123524 !important;
+  color: #fff !important;
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 0.75rem;
+  transition: transform 0.3s;
+}
+
+.social-links a:hover {
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+/* Modal Animations */
+.modal.fade .modal-dialog.modal-dialog-slideright {
+  transform: translate(100%, 0);
+  transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog.modal-dialog-slideright {
+  transform: translate(0, 0);
+}
+
+/* Form Controls */
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(18,53,36,0.25);
+  border-color: #123524;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .navbar-nav {
+      padding: 0.5rem 0;
+  }
+
+  .cart-summary {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+  }
+
+  .footer-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+  }
+
+  .social-links {
+      justify-content: center;
+      margin: 1rem 0;
+  }
+
+  .btn-primary.add-to-cart {
+      padding: 0.6rem 1rem;
+  }
 }
 
 @media (max-width: 576px) {
+  .product-img {
+      height: 150px;
+  }
+  
   .list-group-item {
-      gap: 0.5rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
   }
   
   .quantity-controls {
+      margin-left: 0;
       width: 100%;
-      justify-content: flex-end;
-      margin-top: 0.5rem;
+      justify-content: space-between;
   }
+}
+
+/* Toast Styling */
+.toast {
+  z-index: 1056;
+  background-color: #123524 !important;
+  color: #fff !important;
+}
+
+.toast-header {
+  background-color: #0f2d1e !important;
+  color: #fff !important;
 }
